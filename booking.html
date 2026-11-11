@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Wander World Travel - Booking Form</title>
+
+    <link rel="stylesheet" href="/styles/booking.css" />
+    <link rel="stylesheet" href="/styles/homepage.css" />
+    <script src="/scripts/booking.js" defer></script>
+  </head>
+
+  <body>
+    <section class="Head">
+      <header class="nav-bar">
+        <img
+          src="./images/logo.white.png"
+          alt="WANDERWORLD_LOGO"
+          class="logo"
+        />
+        <nav class="nav-links">
+          <a href="/homepage.html">HOME</a>
+          <a href="/destinations.html">DESTINATIONS</a>
+          <a href="/packages.html">PACKAGES</a>
+          <a href="/AboutUs.html">ABOUT US</a>
+          <a href="/gallery.html">GALLERY</a>
+          <a href="/contacUs.html">CONTACT</a>
+          <a href="/booking.html" id="selected">BOOKINGS</a>
+        </nav>
+      </header>
+      <h1 class="h1">
+        LET'S PLAN, <br />
+        YOUR NEXT ADVENTURE!
+      </h1>
+      <p>
+        Welcome to Wander World Travel!
+        <br />
+        Tell us about your travel plans and let us help you create an
+        unforgettable adventure.
+      </p>
+    </section>
+    <!-- BOOKING FORM -->
+    <form id="booking-form" class="booking">
+      <fieldset>
+        <legend>Plan My Trip</legend>
+
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input
+            type="text"
+            id="full-name"
+            name="fullName"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="destination">Travel Destination</label>
+
+          <select id="destination" name="destination" required>
+            <option value="" selected disabled>Select your destination</option>
+
+            <optgroup label="Africa">
+              <option value="Cape-Town">Cape Town, South Africa</option>
+              <option value="Zanzibar">Zanzibar, Tanzania</option>
+              <option value="Marrakech">Marrakech, Morocco</option>
+              <option value="Victoria-Falls">Victoria Falls, Zimbabwe</option>
+            </optgroup>
+
+            <optgroup label="Europe">
+              <option value="France">Paris, France</option>
+              <option value="United Kingdom">London, United Kingdom</option>
+              <option value="Italy">Rome, Italy</option>
+              <option value="Santorini">Santorini, Greece</option>
+            </optgroup>
+
+            <optgroup label="Asia and Middle East">
+              <option value="Dubai">Dubai, UAE</option>
+              <option value="Maldives">Maldives</option>
+              <option value="Bali">Bali, Indonesia</option>
+              <option value="Tokyo">Tokyo, Japan</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="departure-city">Departure City</label>
+
+          <select id="departure-city" name="departureCity" required>
+            <option value="" selected disabled>Select City</option>
+            <option value="Abuja">Abuja</option>
+            <option value="Akwa Ibom">Akwa Ibom</option>
+            <option value="Anambra">Anambra</option>
+            <option value="Delta">Delta</option>
+            <option value="Enugu">Enugu</option>
+            <option value="Ibadan">Ibadan</option>
+            <option value="Kano">Kano</option>
+            <option value="Lagos">Lagos</option>
+            <option value="Owerri">Owerri</option>
+            <option value="Uyo">Uyo</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="departure-date">Departure Date</label>
+          <input
+            type="date"
+            id="departure-date"
+            name="departureDate"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="return-date">Return Date</label>
+          <input type="date" id="return-date" name="returnDate" />
+        </div>
+
+        <div class="form-group">
+          <label for="travellers">Number of Travellers</label>
+          <input
+            type="number"
+            id="travellers"
+            name="travellers"
+            min="1"
+            max="20"
+            value="1"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="travel-package">Travel Class</label>
+
+          <select id="travel-package" name="travelPackage" required>
+            <option value="" selected disabled>
+              Select your travel package
+            </option>
+            <option value="Adventure">Adventure</option>
+            <option value="Honeymoon">Honeymoon</option>
+            <option value="Family">Family</option>
+            <option value="Luxury-Escape">Luxury Escape</option>
+            <option value="Budget-Travel">Budget Travel</option>
+            <option value="Cultural-Exploration">Cultural Exploration</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="accommodation">Accommodation Preference</label>
+
+          <select id="accommodation" name="accommodation" required>
+            <option value="">Select accommodation</option>
+            <option value="Budget Hotel">Budget Hotel</option>
+            <option value="Standard Hotel">Standard Hotel</option>
+            <option value="Luxury Hotel">Luxury Hotel</option>
+            <option value="Apartment">Apartment</option>
+            <option value="No Accommodation Needed">
+              No Accommodation Needed
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Type of Travel</label>
+
+          <div class="radio-options">
+            <label>
+              <input
+                type="radio"
+                id="one-way"
+                name="travelType"
+                value="One Way"
+                required
+              />
+              One Way
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                id="round-trip"
+                name="travelType"
+                value="Round Trip"
+              />
+              Round Trip
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="special-requests">Special Requests</label>
+
+          <textarea
+            id="special-requests"
+            name="specialRequests"
+            rows="5"
+            placeholder="Tell us about any special requests..."
+          ></textarea>
+        </div>
+
+        <button type="submit">Submit Booking Request</button>
+      </fieldset>
+    </form>
+
+    <!-- CONFIRMATION MESSAGE -->
+    <section id="confirmation-message" class="confirmation-message" hidden>
+      <h2>Thank You for Choosing Wander World Travel!</h2>
+
+      <p>Your booking request has been received successfully.</p>
+
+      <p>We look forward to helping you plan your next adventure!</p>
+
+      <button type="button" id="new-booking">Make Another Booking</button>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+      <h2>Need Help Planning Your Trip?</h2>
+
+      <h3>Contact Wander World Travel</h3>
+
+      <p>
+        Have questions or need assistance? We are always happy to help you plan
+        your journey.
+      </p>
+
+      <div class="contact-details">
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:eniolaismail40@gmail.com">
+            eniolaismail40@gmail.com
+          </a>
+        </p>
+        <p>
+          <strong>Phone:</strong>
+          <a href="tel:+2349133398009"> +234 913 339 8009 </a>
+        </p>
+
+        <p>
+          <strong>Office Address:</strong>
+          Lagos, Nigeria
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footHead">
+        <img src="/images/logo.white.png" alt="logo" class="AboutLogo" /><br />
+        <small>Explore the world. Experience more.</small><br />
+        <small
+          >Making every journey memorable through reliable,affordable and
+          exciting travel experiences.</small
+        >
+      </div>
+      <div class="footMain">
+        <div class="footlinks">
+          <h6>Quick Links</h6>
+          <small>
+            <ul>
+              <li><a href="/homepage.html">HOME</a></li>
+              <li><a href="/destinations.html">DESTINATIONS</a></li>
+              <li><a href="/packages.html">PACKAGES</a></li>
+              <li><a href="/AboutUs.html">ABOUT US</a></li>
+              <li><a href="/gallery.html">GALLERY</a></li>
+              <li><a href="/contacUs.html">CONTACT</a></li>
+              <li><a href="/booking.html">BOOKINGS</a></li>
+            </ul>
+          </small>
+        </div>
+        <div class="footpackages">
+          <h6>Our Packages</h6>
+          <small>
+            <li><a href="#">Adventure</a></li>
+            <li><a href="#">Honeymoon</a></li>
+            <li><a href="#">Family Vacation</a></li>
+            <li><a href="#">Luxury Escape</a></li>
+            <li><a href="#">Budget Travels</a></li>
+            <li><a href="#">Cultural Exploration</a></li>
+          </small>
+        </div>
+        <div class="footdestinations">
+          <h6>Popular Destinations</h6>
+          <small>
+            <li><a href="#">Dubai, UAE</a></li>
+            <li><a href="#">Maldives</a></li>
+            <li><a href="#">Bali, Indonesia</a></li>
+            <li><a href="#">Tokyo, Japan</a></li>
+            <li><a href="#">Paris, France</a></li>
+            <li><a href="#">London, UK</a></li>
+          </small>
+        </div>
+        <div class="footcontact">
+          <h6>Contact Us</h6>
+          <li>Lagos, Nigeria</li>
+          <li>+234 913 333 98009</li>
+          <li>info@wanderworldtravels.com</li>
+          <li>Mon-Sat</li>
+        </div>
+      </div>
+      <div class="footfooter">
+        <h6>Stay Connected</h6>
+        <small
+          >Follow us for travel inspiration, exciting destinations and exclusive
+          offers.</small
+        >
+        <div class="medias"></div>
+        <p>2026 WANDERWORLD TRAVELS. All Rights Reserved.</p>
+        <small class="last">Explore Beyond Boundaries</small>
+      </div>
+    </footer>
+  </body>
+</html>

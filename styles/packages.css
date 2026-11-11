@@ -1,0 +1,515 @@
+/* =================================
+   GLOBAL SETTINGS
+================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f8f8f6;
+  color: #17212b;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  --navy: #101e2c;
+  --deep-navy: #0a1520;
+  --gold: #c9a45c;
+  --light-gold: #e7cc91;
+  --white: #ffffff;
+  --grey: #777f86;
+}
+
+/* =================================
+   HERO SECTION
+================================= */
+
+.hero-bottom {
+  position: absolute;
+  bottom: 25px;
+  left: 10%;
+  right: 10%;
+  display: flex;
+  justify-content: space-between;
+  color: #c3c9ce;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+/* =================================
+   INTRODUCTION
+================================= */
+
+.package-intro {
+  padding: 100px 20px 65px;
+  text-align: center;
+  max-width: 850px;
+  margin: auto;
+}
+
+.package-intro h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.3;
+  margin: 20px 0;
+  color: var(--navy);
+}
+
+.package-intro h2 span {
+  color: #b58c49;
+  font-style: italic;
+}
+
+.package-intro p {
+  max-width: 620px;
+  margin: auto;
+  color: var(--grey);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* =================================
+   PACKAGE GRID
+================================= */
+
+.packages-section {
+  padding: 20px 8% 110px;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* =================================
+   PACKAGE CARDS
+================================= */
+
+.package-card {
+  background: white;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.045);
+  transition: 0.4s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.package-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+  border-bottom-color: var(--gold);
+}
+
+/* =================================
+   PACKAGE IMAGE CONTAINERS
+================================= */
+
+.package-image {
+  height: 245px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #253b4b;
+  transition: 0.5s ease;
+}
+
+/* Replace the empty URLs with your images */
+
+.adventure-img {
+  background-image:
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent),
+    url("/images/packages.image/adventure.png");
+}
+
+.honeymoon-img {
+  background-image:
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent),
+    url("/images/packages.image/honeymoon.png");
+}
+
+.family-img {
+  background-image:
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent),
+    url("/images/packages.image/family\ vacation.png");
+}
+
+.luxury-img {
+  background-image:
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent),
+    url("/images/packages.image/luxury-escape.png");
+}
+
+.budget-img {
+  background-image:
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent),
+    url("/images/packages.image/budget.png");
+}
+
+.cultural-img {
+  background-image:
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent),
+    url("/images/packages.image/culture.png");
+}
+
+/* Image hover zoom */
+
+.package-card:hover .package-image {
+  background-size: 112%;
+}
+
+/* Image labels */
+
+.package-number {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.image-label {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* =================================
+   PACKAGE CONTENT
+================================= */
+
+.package-content {
+  padding: 28px 25px 25px;
+}
+
+.package-category {
+  color: #b38b4b;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.package-content h3 {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  margin: 13px 0;
+  color: var(--navy);
+  transition: 0.3s;
+}
+
+.package-card:hover h3 {
+  color: #b58c49;
+}
+
+.package-content p {
+  font-size: 12.5px;
+  line-height: 1.9;
+  color: #747d85;
+  min-height: 120px;
+}
+
+/* Package features */
+
+.package-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  margin-top: 20px;
+}
+
+.package-features span {
+  font-size: 11px;
+  color: #48535c;
+}
+
+.package-features span::first-letter {
+  color: #bd9655;
+}
+
+/* =================================
+   PACKAGE BOTTOM
+================================= */
+
+.package-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.package-bottom > span {
+  font-family: Georgia, serif;
+  font-size: 11px;
+  font-style: italic;
+  color: #8b8b8b;
+}
+
+.package-btn {
+  background: var(--navy);
+  color: white;
+  padding: 13px 17px;
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.package-btn:hover {
+  background: var(--gold);
+  color: var(--deep-navy);
+  transform: translateY(-3px);
+}
+
+/* =================================
+   BOOKING CALLOUT
+================================= */
+
+.booking-callout {
+  background:
+    linear-gradient(rgba(8, 21, 33, 0.94), rgba(8, 21, 33, 0.94)),
+    url("") center/cover no-repeat;
+
+  background-color: var(--navy);
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+.callout-content {
+  max-width: 750px;
+  margin: auto;
+}
+
+.callout-content h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(34px, 5vw, 55px);
+  line-height: 1.25;
+  margin: 22px 0;
+}
+
+.callout-content h2 span {
+  display: block;
+  color: var(--light-gold);
+  font-style: italic;
+}
+
+.callout-content p {
+  color: #c1c8ce;
+  font-size: 14px;
+  line-height: 1.9;
+  max-width: 600px;
+  margin: auto;
+}
+
+.callout-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 35px;
+  padding: 17px 27px;
+  background: var(--gold);
+  color: var(--deep-navy);
+  font-size: 12px;
+  font-weight: 800;
+  transition: 0.3s;
+}
+
+.callout-btn:hover {
+  background: white;
+  transform: translateY(-5px);
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+.footer {
+  background: #08121c;
+  color: white;
+  padding: 70px 8% 25px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+  padding-bottom: 50px;
+}
+
+.footer .logo {
+  color: white;
+}
+
+.footer-brand p {
+  color: #aab2b9;
+  font-size: 12px;
+  line-height: 1.9;
+  max-width: 280px;
+  margin-top: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-links h4 {
+  color: var(--gold);
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #aab2b9;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+  padding-left: 5px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #26333e;
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: #89939c;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+/* =================================
+   ANIMATIONS
+================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =================================
+   TABLET RESPONSIVENESS
+================================= */
+
+@media (max-width: 1000px) {
+  .packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .packages-section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+/* =================================
+   MOBILE RESPONSIVENESS
+================================= */
+
+@media (max-width: 700px) {
+  .hero-bottom {
+    left: 7%;
+    right: 7%;
+    font-size: 8px;
+  }
+
+  .package-intro {
+    padding: 75px 7% 45px;
+  }
+
+  .packages-section {
+    padding: 15px 6% 75px;
+  }
+
+  .packages-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .package-image {
+    height: 260px;
+  }
+
+  .package-content p {
+    min-height: auto;
+  }
+
+  .booking-callout {
+    padding: 80px 7%;
+  }
+
+  .footer {
+    padding: 55px 7% 25px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 20px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 380px) {
+  .package-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .package-btn {
+    margin-top: 5px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+}

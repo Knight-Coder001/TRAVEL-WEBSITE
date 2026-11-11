@@ -1,0 +1,1271 @@
+/* =====================================================
+   1. GLOBAL SETTINGS AND COLOR VARIABLES
+===================================================== */
+
+:root {
+  --navy: #040b25;
+  --deep-navy: #020617;
+  --gold: #d9a928;
+  --light-gold: #f4d477;
+  --white: #ffffff;
+  --light-bg: #f5f6fa;
+  --text-dark: #202536;
+  --text-muted: #626b7c;
+  --shadow: 0 8px 25px rgba(4, 11, 37, 0.12);
+  --transition: all 0.35s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+}
+
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.7;
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =====================================================
+   2. HERO / HEADER SECTION
+===================================================== */
+
+.Head {
+  background-image:
+    linear-gradient(to right, rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.25)),
+    linear-gradient(to bottom, rgba(2, 6, 23, 0.45), transparent),
+    url(/images/header-bg.png);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 550px;
+  padding: 20px 5% 50px;
+  color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+/* Navigation bar */
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.logo {
+  height: 95px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.nav-links a {
+  color: var(--white);
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  padding: 9px 12px;
+  border-radius: 5px;
+  border-bottom: 2px solid transparent;
+
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--light-gold);
+  border-bottom: 2px solid var(--gold);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+#selected {
+  color: var(--light-gold);
+  border-bottom: 2px solid var(--gold);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Main hero heading */
+
+.Head h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(36px, 5.5vw, 65px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 1.5px;
+
+  max-width: 850px;
+  margin-top: 75px;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.Head h1::first-line {
+  color: var(--light-gold);
+}
+
+.Head p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #f1f1f1;
+  max-width: 700px;
+  margin-bottom: 25px;
+}
+
+/* Hero buttons */
+
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  min-width: 160px;
+  padding: 12px 20px;
+
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  transition: var(--transition);
+}
+
+.dest-btn {
+  background: var(--gold);
+  color: var(--navy);
+  border: 2px solid var(--gold);
+}
+
+.dest-btn:hover {
+  background: var(--light-gold);
+  transform: translateY(-4px);
+}
+
+.Head .pkg-btn {
+  color: var(--light-gold);
+}
+
+.pkg-btn {
+  border: 2px solid var(--gold);
+  background: transparent;
+}
+
+.pkg-btn:hover {
+  background: var(--gold);
+  color: var(--navy);
+  transform: translateY(-4px);
+}
+
+/* =====================================================
+   3. GENERAL SECTION HEADINGS
+===================================================== */
+
+.popular-destinations,
+.packages-card {
+  width: 90%;
+  margin: 65px auto;
+  padding: 40px;
+  border-radius: 12px;
+  background: var(--light-bg);
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.right-head h2 {
+  color: var(--navy);
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.right-head p {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+.aside a {
+  color: #9a7010;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.aside a:hover {
+  color: var(--navy);
+  text-decoration: underline;
+}
+
+/* =====================================================
+   4. POPULAR DESTINATIONS SECTION
+   Existing background images are preserved.
+===================================================== */
+
+.destinations-card {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.card {
+  height: 300px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  color: var(--white);
+  isolation: isolate;
+  cursor: pointer;
+
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* Image zoom layer */
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: transform 0.65s ease;
+}
+
+/* Dark overlay for readable destination text */
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background: linear-gradient(
+    to top,
+    rgba(2, 6, 23, 0.95),
+    rgba(2, 6, 23, 0.05)
+  );
+}
+
+/* Original destination images */
+
+.card1::before {
+  background-image: url(/images/africa.destinations/cape.town/CAPE\ TOWN\ CARD.jpg);
+}
+
+.card2::before {
+  background-image: url(/images/africa.destinations/zanzibar/ZANZIBAR\ CARD.jpg);
+}
+
+.card3::before {
+  background-image: url(/images/european.destinations/france/FRANCE\ CARD.jpg);
+}
+
+.card4::before {
+  background-image: url(/images/european.destinations/rome/ROME\ CARD.jpg);
+}
+
+.card5::before {
+  background-image: url(/images/asia.destinations/dubai/DUBAI\ CARD.jpg);
+}
+
+.card6::before {
+  background-image: url(/images/asia.destinations/maldives/MALDIVES\ CARD.jpg);
+}
+
+/* Destination hover animation */
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(4, 11, 37, 0.25);
+}
+
+.card:hover::before {
+  transform: scale(1.12);
+}
+
+/* Destination names and reviews */
+
+.hero {
+  position: absolute;
+  left: 20px;
+  right: 10px;
+  bottom: 20px;
+  z-index: 1;
+}
+
+.hero h3 {
+  font-size: 19px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.hero small {
+  color: var(--light-gold);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =====================================================
+   5. FEATURED PACKAGES SECTION
+===================================================== */
+
+.packages {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  width: 100%;
+  margin: 25px auto;
+  padding: 0;
+  color: var(--text-dark);
+}
+
+.package {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* Package card hover */
+
+.package:hover {
+  transform: translateY(-8px) scale(1.025);
+  box-shadow: 0 18px 35px rgba(4, 11, 37, 0.2);
+}
+
+/* Package images */
+
+.pkg-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  margin: 0;
+  border-radius: 0;
+}
+
+.pkg-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 0;
+
+  transition: transform 0.6s ease;
+}
+
+.package:hover .pkg-image img {
+  transform: scale(1.08);
+}
+
+/* Package descriptions */
+
+.pkg-description {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background: var(--white);
+  border-radius: 0;
+}
+
+.pkg-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.pkg-title h3 {
+  color: var(--navy);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.pkg-description .days {
+  color: #99700e;
+  background: #fff3cd;
+  padding: 4px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.pkg-description h4 {
+  font-size: 17px;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.pkg-description p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.pkg-description > h3 {
+  color: #a47a13;
+  font-size: 23px;
+  font-weight: 800;
+  margin-top: auto;
+}
+
+.pkg-description small {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+/* =====================================================
+   6. ABOUT US SECTION
+===================================================== */
+
+.About-us {
+  width: 90%;
+  margin: 65px auto;
+  padding: 35px;
+  border-radius: 15px;
+  background: #f7f8fc;
+  box-shadow: var(--shadow);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.About-us h3 {
+  color: var(--navy);
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  margin-bottom: 12px;
+}
+
+.About-us p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* Introduction */
+
+.Introduction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+
+  width: 100%;
+  margin: 10px auto 30px;
+  padding: 30px;
+
+  border-radius: 12px;
+  background: linear-gradient(135deg, #07132e, #142b50);
+  box-shadow: var(--shadow);
+}
+
+.Introduction .AboutLogo {
+  width: 280px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.Introduction .intro {
+  flex: 1;
+}
+
+.Introduction h3 {
+  color: var(--light-gold);
+  font-size: 23px;
+}
+
+.Introduction p {
+  color: #e3e8f1;
+}
+
+/* =====================================================
+   7. MISSION AND VISION
+===================================================== */
+
+.mission-vision {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+
+  width: 100%;
+  margin: 30px auto;
+}
+
+.mission,
+.vision {
+  width: 100%;
+  min-height: 210px;
+  padding: 30px;
+
+  background: var(--white);
+  border-radius: 12px;
+  border-top: 5px solid var(--gold);
+
+  box-shadow: var(--shadow);
+  text-align: center;
+
+  transition: var(--transition);
+}
+
+.mission:hover,
+.vision:hover {
+  transform: translateY(-6px);
+  background: #fffaf0;
+}
+
+.mission h3,
+.vision h3 {
+  font-size: 21px;
+  color: var(--navy);
+}
+
+.mission p,
+.vision p {
+  color: var(--text-muted);
+}
+
+/* =====================================================
+   8. CORE VALUES
+===================================================== */
+
+.CoreValues {
+  width: 100%;
+  margin: 35px auto 10px;
+  padding: 30px 10px;
+  border-radius: 12px;
+  background: #eef1f8;
+  border: none;
+}
+
+.CoreValues > h3 {
+  text-align: center;
+  font-size: 25px;
+  color: #a47a13;
+  margin-bottom: 25px;
+}
+
+.values {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.Value {
+  width: 100%;
+  min-height: 150px;
+  padding: 22px 15px;
+
+  background: linear-gradient(145deg, #07132e, #142b50);
+  border-radius: 10px;
+  border-bottom: 4px solid var(--gold);
+
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.Value:hover {
+  transform: translateY(-7px);
+  background: #152c52;
+}
+
+.Value h3 {
+  color: var(--light-gold);
+  font-size: 15px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.Value p {
+  color: #e6eaf2;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* =====================================================
+   9. FOOTER SECTION
+===================================================== */
+
+.footer {
+  width: 100%;
+  margin-top: 70px;
+  padding: 45px 6% 20px;
+
+  background: linear-gradient(135deg, #020617, #071633);
+  color: var(--white);
+}
+
+/* Footer introduction */
+
+.footHead {
+  width: 100%;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footHead .AboutLogo {
+  width: 220px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.footHead small {
+  display: block;
+  color: #cbd3e1;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.footHead small:first-of-type {
+  color: var(--light-gold);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* Footer main columns */
+
+.footMain {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 35px;
+
+  width: 100%;
+  padding: 35px 0;
+}
+
+.footMain h6 {
+  color: var(--light-gold);
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 18px;
+  position: relative;
+}
+.footMain h6::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 3px;
+  background: var(--gold);
+  margin-top: 7px;
+  border-radius: 5px;
+}
+
+.footMain li {
+  margin-bottom: 9px;
+  font-size: 13px;
+  color: #cbd3e1;
+}
+
+.footMain a {
+  color: #cbd3e1;
+  font-size: 13px;
+  transition: var(--transition);
+}
+
+.footMain a:hover {
+  color: var(--light-gold);
+  padding-left: 5px;
+}
+
+/* Footer bottom */
+
+.footfooter {
+  text-align: center;
+  padding: 25px 10px 5px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footfooter h6 {
+  color: var(--light-gold);
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.footfooter small {
+  color: #cbd3e1;
+  font-size: 13px;
+}
+
+.footfooter p {
+  color: #cbd3e1;
+  font-size: 12px;
+  margin-top: 25px;
+}
+
+.footfooter .last {
+  display: block;
+  color: var(--light-gold);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.medias {
+  margin: 15px auto;
+}
+
+/* =====================================================
+   10. TABLET RESPONSIVENESS
+===================================================== */
+
+@media (max-width: 1000px) {
+  .nav-bar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    gap: 5px;
+  }
+
+  .destinations-card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .packages {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .values {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footMain {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .Introduction {
+    gap: 20px;
+  }
+
+  .Introduction .AboutLogo {
+    width: 200px;
+  }
+}
+
+/* =====================================================
+   11. MOBILE RESPONSIVENESS
+===================================================== */
+
+@media (max-width: 600px) {
+  /* Header */
+
+  .Head {
+    min-height: 600px;
+    padding: 15px 20px 80px;
+    background-position: center;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .logo {
+    height: 75px;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+    padding: 7px 8px;
+    letter-spacing: 0.3px;
+  }
+
+  .Head h1 {
+    font-size: clamp(30px, 8vw, 42px);
+    line-height: 1.25;
+    margin-top: 65px;
+  }
+
+  .Head p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .Head p br {
+    display: none;
+  }
+
+  .btns {
+    gap: 10px;
+  }
+
+  .btn {
+    min-width: 130px;
+    font-size: 12px;
+    padding: 12px;
+  }
+
+  /* General sections */
+
+  .popular-destinations,
+  .packages-card {
+    width: 92%;
+    padding: 22px 15px;
+    margin: 40px auto;
+  }
+
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .right-head h2 {
+    font-size: 22px;
+  }
+
+  .right-head p {
+    font-size: 13px;
+  }
+
+  /* Destinations */
+
+  .destinations-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .card {
+    height: 270px;
+  }
+
+  .hero h3 {
+    font-size: 18px;
+  }
+
+  /* Packages */
+
+  .packages {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 0;
+  }
+
+  .package {
+    width: 100%;
+  }
+
+  .pkg-image {
+    height: 210px;
+  }
+
+  .pkg-description {
+    padding: 18px;
+  }
+
+  /* About section */
+
+  .About-us {
+    width: 92%;
+    padding: 15px;
+    margin: 40px auto;
+  }
+
+  .Introduction {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .Introduction .AboutLogo {
+    width: 180px;
+    height: 110px;
+  }
+
+  .Introduction h3 {
+    font-size: 20px;
+  }
+
+  .Introduction p {
+    font-size: 13px;
+  }
+
+  /* Mission and vision */
+
+  .mission-vision {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .mission,
+  .vision {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .mission h3,
+  .vision h3 {
+    font-size: 19px;
+  }
+
+  .mission p,
+  .vision p {
+    font-size: 13px;
+  }
+
+  /* Core values */
+
+  .CoreValues {
+    padding: 20px 5px;
+  }
+
+  .CoreValues > h3 {
+    font-size: 21px;
+  }
+
+  .values {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .Value {
+    min-height: 120px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 35px 20px 20px;
+  }
+
+  .footHead {
+    text-align: center;
+  }
+
+  .footHead .AboutLogo {
+    width: 180px;
+    height: 85px;
+  }
+
+  .footMain {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px 15px;
+  }
+
+  .footMain h6 {
+    font-size: 14px;
+  }
+
+  .footMain li,
+  .footMain a {
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+
+  .footfooter p {
+    font-size: 11px;
+  }
+}
+
+/* =====================================================
+   12. SMALL MOBILE PHONES
+===================================================== */
+
+@media (max-width: 380px) {
+  .nav-links a {
+    font-size: 10px;
+    padding: 6px;
+  }
+
+  .Head h1 {
+    font-size: 29px;
+  }
+
+  .btn {
+    min-width: 115px;
+    font-size: 11px;
+  }
+
+  .footMain {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    height: 240px;
+  }
+}
+
+/* =====================================================
+   13. ACCESSIBILITY
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* 
+FAQ STYLES */
+
+/* FAQ SECTION */
+
+.faq-section {
+  padding: 90px 7%;
+  background: #f8f9fc;
+  font-family: Arial, sans-serif;
+}
+
+.faq-container {
+  max-width: 950px;
+  margin: auto;
+}
+
+/* HEADING */
+
+.faq-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.faq-tag {
+  display: inline-block;
+  color: #c49b42;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.faq-heading h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  color: #102a43;
+  margin-bottom: 15px;
+}
+
+.faq-heading h2 span {
+  color: #c49b42;
+}
+
+.faq-heading p {
+  color: #718096;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 550px;
+  margin: auto;
+}
+
+/* FAQ ITEMS */
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq-item {
+  background: #fff;
+  border: 1px solid #e8ebf0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: #c49b42;
+  box-shadow: 0 8px 25px rgba(16, 42, 67, 0.07);
+}
+
+/* QUESTION BUTTON */
+
+.faq-question {
+  width: 100%;
+  padding: 23px 25px;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  text-align: left;
+  cursor: pointer;
+  color: #102a43;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.faq-icon {
+  min-width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #f5f0e5;
+  color: #b58b32;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  transition: all 0.3s ease;
+}
+
+/* ANSWERS */
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.faq-answer p {
+  padding: 0 25px 23px;
+  margin: 0;
+  color: #718096;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* ACTIVE STATE */
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+  background: #102a43;
+  color: #fff;
+}
+
+.faq-item.active {
+  border-color: #c49b42;
+}
+
+/* BOTTOM CONTACT AREA */
+
+.faq-footer {
+  text-align: center;
+  margin-top: 45px;
+  padding: 35px 20px;
+  background: #102a43;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.faq-footer h3 {
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.faq-footer p {
+  color: #d1d9e0;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.faq-footer a {
+  display: inline-block;
+  padding: 13px 28px;
+  background: #c49b42;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.faq-footer a:hover {
+  background: #a77e29;
+  transform: translateY(-3px);
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+  .faq-section {
+    padding: 65px 5%;
+  }
+
+  .faq-question {
+    padding: 19px 16px;
+    font-size: 14px;
+  }
+
+  .faq-answer p {
+    padding: 0 16px 20px;
+    font-size: 13px;
+  }
+
+  .faq-footer {
+    padding: 30px 15px;
+  }
+}

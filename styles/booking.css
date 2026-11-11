@@ -1,0 +1,301 @@
+/* GENERAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fb;
+  color: #172b4d;
+  line-height: 1.6;
+}
+
+/* MAIN HEADING */
+.h1 {
+  text-align: left;
+}
+h1 {
+  text-align: center;
+  color: #0b2345;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+/* INTRODUCTION */
+body > p {
+  max-width: 750px;
+  margin: 0 auto 30px;
+  text-align: center;
+  color: #52647d;
+  font-size: 16px;
+}
+
+/* BOOKING FORM */
+.booking {
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  border-top: 5px solid #d4a017;
+  box-shadow: 0 4px 15px rgba(11, 35, 69, 0.12);
+  transition: box-shadow 0.3s ease;
+}
+
+.booking:hover {
+  box-shadow: 0 6px 20px rgba(11, 35, 69, 0.16);
+}
+
+/* FIELDSETS */
+fieldset {
+  border: 1px solid #d4a017;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+legend {
+  color: #b8860b;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+/* FORM GROUPS */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* LABELS */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #0b2345;
+}
+
+/* INPUTS, SELECTS AND TEXTAREA */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #c5cfdd;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #172b4d;
+  outline: none;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+/* INPUT FOCUS */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #d4a017;
+  box-shadow: 0 0 5px rgba(212, 160, 23, 0.3);
+}
+
+/* TRAVEL TYPE */
+.radio-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.radio-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.radio-options input[type="radio"] {
+  width: auto;
+  margin: 0;
+  accent-color: #d4a017;
+}
+
+/* TEXTAREA */
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* SUBMIT BUTTON */
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #d4a017;
+  color: #0b2345;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #0b2345;
+  color: #ffffff;
+}
+
+button:focus-visible {
+  outline: 3px solid #d4a017;
+  outline-offset: 3px;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 30px;
+  text-align: center;
+  background-color: #0b2345;
+  color: white;
+  border-radius: 12px;
+  border-bottom: 5px solid #d4a017;
+}
+
+.contact-section h2 {
+  color: #d4a017;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.contact-section h3 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.contact-section p {
+  color: #e5eaf2;
+  margin-bottom: 20px;
+}
+
+.contact-details p {
+  margin-bottom: 12px;
+}
+
+.contact-details a {
+  color: #e5b83d;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+/* CONFIRMATION MESSAGE */
+.confirmation-message {
+  max-width: 750px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #fff8e5;
+  border: 2px solid #d4a017;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.confirmation-message h2 {
+  color: #0b2345;
+  margin-bottom: 12px;
+}
+
+.confirmation-message p {
+  color: #52647d;
+  margin-bottom: 10px;
+}
+
+.confirmation-message[hidden] {
+  display: none;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 30px;
+}
+
+footer p {
+  color: #52647d;
+  font-size: 14px;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 600px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+
+  .booking {
+    padding: 15px;
+  }
+
+  fieldset {
+    padding: 12px;
+  }
+
+  .contact-section {
+    padding: 20px 15px;
+  }
+
+  .contact-section h2 {
+    font-size: 23px;
+  }
+
+  .radio-options {
+    gap: 12px;
+  }
+}
+.location-selection {
+  display: grid;
+  gap: 18px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+.form-group select:focus {
+  border-color: #008b8b;
+}
+
+.form-group select:disabled {
+  background: #f1f1f1;
+  cursor: not-allowed;
+}

@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | WanderWorld Travels</title>
+    <link rel="stylesheet" href="./styles/gallery.css" />
+    <link rel="stylesheet" href="./styles/homepage.css" />
+  </head>
+  <body>
+    <section class="Head">
+      <header class="nav-bar">
+        <img
+          src="./images/logo.white.png"
+          alt="WANDERWORLD_LOGO"
+          class="logo"
+        />
+        <nav class="nav-links">
+          <a href="/homepage.html">HOME</a>
+          <a href="/destinations.html">DESTINATIONS</a>
+          <a href="/packages.html">PACKAGES</a>
+          <a href="/AboutUs.html">ABOUT US</a>
+          <a href="/gallery.html" id="selected">GALLERY</a>
+          <a href="/contacUs.html">CONTACT</a>
+          <a href="booking.html">BOOKINGS</a>
+        </nav>
+      </header>
+      <h1>
+        DISCOVER THE WORLD, <br />
+        ONE JOURNEY AT A TIME
+      </h1>
+      <p>
+        “Explore beautiful destinations, experience different cultures and
+        <br />
+        create unforgettable memories with our carefully designed travel
+        packages”
+      </p>
+      <div class="btns">
+        <a href="#popular-destinations" class="btn dest-btn"
+          >EXPLORE <br />DESTINATIONS</a
+        >
+        <a href="#packages-card" class="btn pkg-btn">VIEW <br />PACKAGES</a>
+      </div>
+    </section>
+
+    <main id="gallery" class="gallery-section">
+      <div class="section-heading">
+        <span class="eyebrow">OUR PHOTO COLLECTION</span>
+        <h2>Explore The Beauty Of <span>Discovery</span></h2>
+        <p>A collection of beautiful places waiting to be explored.</p>
+      </div>
+
+      <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">All Photos</button>
+        <button class="filter-btn" data-filter="landscape">Landscapes</button>
+        <button class="filter-btn" data-filter="beaches">Beaches & Seas</button>
+        <button class="filter-btn" data-filter="cities">City Views</button>
+        <button class="filter-btn" data-filter="architecture">
+          Architecture
+        </button>
+        <button class="filter-btn" data-filter="nature">
+          Nature & Wildlife
+        </button>
+        <button class="filter-btn" data-filter="adventure">Adventure</button>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- LANDSCAPES -->
+        <div class="gallery-item tall" data-category="landscape">
+          <img
+            src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=900"
+            alt="Cape Town landscape"
+          />
+          <div class="image-overlay"><span>Cape Town, South Africa</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="landscape">
+          <img
+            src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=900"
+            alt="Santorini landscape"
+          />
+          <div class="image-overlay"><span>Santorini, Greece</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="landscape">
+          <img
+            src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=900"
+            alt="European coastal scenery"
+          />
+          <div class="image-overlay"><span>Italy</span></div>
+        </div>
+
+        <div class="gallery-item wide" data-category="landscape">
+          <img
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200"
+            alt="Beautiful scenic landscape"
+          />
+          <div class="image-overlay"><span>Beautiful Landscapes</span></div>
+        </div>
+
+        <!-- BEACHES AND SEAS -->
+        <div class="gallery-item tall" data-category="beaches">
+          <img
+            src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=900"
+            alt="Maldives ocean"
+          />
+          <div class="image-overlay"><span>Maldives</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="beaches">
+          <img
+            src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=900"
+            alt="Ocean waves"
+          />
+          <div class="image-overlay"><span>Tropical Coastlines</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="beaches">
+          <img
+            src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=900"
+            alt="Tropical travel scenery"
+          />
+          <div class="image-overlay"><span>Zanzibar, Tanzania</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="beaches">
+          <img
+            src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=900"
+            alt="Sea and waves"
+          />
+          <div class="image-overlay"><span>Ocean Views</span></div>
+        </div>
+
+        <!-- CITY VIEWS -->
+        <div class="gallery-item" data-category="cities">
+          <img
+            src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=900"
+            alt="Paris city"
+          />
+          <div class="image-overlay"><span>Paris, France</span></div>
+        </div>
+
+        <div class="gallery-item tall" data-category="cities">
+          <img
+            src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=900"
+            alt="London city"
+          />
+          <div class="image-overlay"><span>London, United Kingdom</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="cities">
+          <img
+            src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=900"
+            alt="Dubai skyline"
+          />
+          <div class="image-overlay"><span>Dubai, UAE</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="cities">
+          <img
+            src="https://images.unsplash.com/photo-1540959733332-eab4dehd?auto=format&fit=crop&w=900&q=80"
+            alt="Tokyo city view"
+          />
+          <div class="image-overlay"><span>Tokyo, Japan</span></div>
+        </div>
+
+        <!-- ARCHITECTURE -->
+        <div class="gallery-item" data-category="architecture">
+          <img
+            src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=900"
+            alt="Rome architecture"
+          />
+          <div class="image-overlay"><span>Rome, Italy</span></div>
+        </div>
+
+        <div class="gallery-item tall" data-category="architecture">
+          <img
+            src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=900"
+            alt="Moroccan architecture"
+          />
+          <div class="image-overlay"><span>Marrakech, Morocco</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="architecture">
+          <img
+            src="https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=900"
+            alt="Santorini buildings"
+          />
+          <div class="image-overlay"><span>Santorini, Greece</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="architecture">
+          <img
+            src="https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=900"
+            alt="Japanese city architecture"
+          />
+          <div class="image-overlay"><span>Japan</span></div>
+        </div>
+
+        <!-- NATURE AND WILDLIFE -->
+        <div class="gallery-item tall" data-category="nature">
+          <img
+            src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=900"
+            alt="Wildlife in nature"
+          />
+          <div class="image-overlay"><span>Nature Encounters</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="nature">
+          <img
+            src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=900"
+            alt="Waterfall"
+          />
+          <div class="image-overlay"><span>Victoria Falls, Zimbabwe</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="nature">
+          <img
+            src="https://images.unsplash.com/photo-1511497584788-876760111969?w=900"
+            alt="Green forest"
+          />
+          <div class="image-overlay"><span>Natural Beauty</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="nature">
+          <img
+            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=900"
+            alt="Forest scenery"
+          />
+          <div class="image-overlay"><span>Nature Trails</span></div>
+        </div>
+
+        <!-- ADVENTURE -->
+        <div class="gallery-item" data-category="adventure">
+          <img
+            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900"
+            alt="Mountain adventure"
+          />
+          <div class="image-overlay"><span>Mountain Adventures</span></div>
+        </div>
+
+        <div class="gallery-item tall" data-category="adventure">
+          <img
+            src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=900"
+            alt="Outdoor adventure"
+          />
+          <div class="image-overlay"><span>Explore The Outdoors</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="adventure">
+          <img
+            src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=900"
+            alt="Travel exploration"
+          />
+          <div class="image-overlay"><span>Travel Experiences</span></div>
+        </div>
+
+        <div class="gallery-item" data-category="adventure">
+          <img
+            src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=900"
+            alt="Mountain lake"
+          />
+          <div class="image-overlay"><span>Outdoor Discovery</span></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="close-lightbox" aria-label="Close">&times;</button>
+      <button class="lightbox-prev" aria-label="Previous image">
+        &#10094;
+      </button>
+      <img src="" alt="Expanded gallery photograph" id="lightbox-img" />
+      <button class="lightbox-next" aria-label="Next image">&#10095;</button>
+      <p id="lightbox-caption"></p>
+    </div>
+
+    <section class="gallery-cta">
+      <span class="eyebrow">YOUR NEXT ADVENTURE STARTS HERE</span>
+      <h2>Beautiful Places. <span>Unforgettable Memories.</span></h2>
+      <p>
+        Let us help you turn the pictures you love into experiences you will
+        never forget.
+      </p>
+      <a href="booking.html">Book Your Journey</a>
+    </section>
+
+    <footer class="footer">
+      <div class="footHead">
+        <img src="/images/logo.white.png" alt="logo" class="AboutLogo" /><br />
+        <small>Explore the world. Experience more.</small><br />
+        <small
+          >Making every journey memorable through reliable,affordable and
+          exciting travel experiences.</small
+        >
+      </div>
+      <div class="footMain">
+        <div class="footlinks">
+          <h6>Quick Links</h6>
+          <small>
+            <ul>
+              <li><a href="/homepage.html">HOME</a></li>
+              <li><a href="/destinations.html">DESTINATIONS</a></li>
+              <li><a href="/packages.html">PACKAGES</a></li>
+              <li><a href="/AboutUs.html">ABOUT US</a></li>
+              <li><a href="/gallery.html">GALLERY</a></li>
+              <li><a href="/contacUs.html">CONTACT</a></li>
+              <li><a href="/booking.html">BOOKINGS</a></li>
+            </ul>
+          </small>
+        </div>
+        <div class="footpackages">
+          <h6>Our Packages</h6>
+          <small>
+            <li><a href="#">Adventure</a></li>
+            <li><a href="#">Honeymoon</a></li>
+            <li><a href="#">Family Vacation</a></li>
+            <li><a href="#">Luxury Escape</a></li>
+            <li><a href="#">Budget Travels</a></li>
+            <li><a href="#">Cultural Exploration</a></li>
+          </small>
+        </div>
+        <div class="footdestinations">
+          <h6>Popular Destinations</h6>
+          <small>
+            <li><a href="#">Dubai, UAE</a></li>
+            <li><a href="#">Maldives</a></li>
+            <li><a href="#">Bali, Indonesia</a></li>
+            <li><a href="#">Tokyo, Japan</a></li>
+            <li><a href="#">Paris, France</a></li>
+            <li><a href="#">London, UK</a></li>
+          </small>
+        </div>
+        <div class="footcontact">
+          <h6>Contact Us</h6>
+          <li>Lagos, Nigeria</li>
+          <li>+234 913 333 98009</li>
+          <li>info@wanderworldtravels.com</li>
+          <li>Mon-Sat</li>
+        </div>
+      </div>
+      <div class="footfooter">
+        <h6>Stay Connected</h6>
+        <small
+          >Follow us for travel inspiration, exciting destinations and exclusive
+          offers.</small
+        >
+        <div class="medias"></div>
+        <p>2026 WANDERWORLD TRAVELS. All Rights Reserved.</p>
+        <small class="last">Explore Beyond Boundaries</small>
+      </div>
+    </footer>
+
+    <script src="./scripts/gallery.js"></script>
+  </body>
+</html>
